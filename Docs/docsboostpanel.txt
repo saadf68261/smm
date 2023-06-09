@@ -1,0 +1,299 @@
+Introduction
+
+BoostPanel is an online social media marketing tool (web application) that allows and helps you to sell your Social Media Marketing Services with an easy to use panel. You can provide quality and cheap SMM Services to your customers, they can buy all packages or services like Facebook likes, Instagram followers, Twitter followers, Youtube Viewers, SEO and many more. You can create as many as services & packages according to your expertise, this is a completely dynamic panel. Whether it is something you need for your social media accounts or you are a SMM services reseller, you will find it all here.
+
+BUY NOW
+
+It is highly recommended to use HTTPS for a better experience with BoostPanel.
+
+Requirements
+
+PHP >= 5.6
+PHP CURL
+PHP OpenSSL
+PHP PDO
+Mod Rewrite
+Mbstring PHP Extension
+Allow url fopen On
+Zip Extension
+Configured Cronjob
+
+Installation
+
+Step-by-step guides to set up this script on your web application. Please read the following guide carefully.
+
+Step 1 – Upload and Extract a Zip Archive
+Upload or zip file installed on your web hosting. And then extract the zip file
+
+Step 2 – Go to installation page
+Open your browser and go to installation page www.yourdomain.com
+
+Step 3 – Fill out all the requested informations.
+After redirecting to installation page, you have to fill the form with all the requested informations (purchase code, database name, admin account details…etc)
+
+Step 4 – Finish Installation
+After filling in all the information requested in step 3. You will see a message successfully after a few seconds, if all goes well.
+After Installation... Do Signup And Make it Admin From PHPMYADMIN
+
+Configure Cronjob
+
+To be able to send an order, order status. The Cron task must be configured in your hosting.
+
+After installing, log in with your administrator account on the panel.
+Access the menu Admin > Settings and copy the Token in Cron Job Token as in the image below.
+
+Note
+Clicking in you update the token to a new one, also reminding you to update the token of the links already created in cron to continue working.
+
+Links to add to CronJob
+
+https://yourwebsite.com/cron/orders?security=your_token_generated
+
+https://yourwebsite.com/cron/subscriptions?security=your_token_generated
+
+https://yourwebsite.com/cron/status_orders?security=your_token_generated
+
+https://yourwebsite.com/cron/status_subscriptions?security=your_token_generated
+
+https://yourwebsite.com/cron/payments_status?security=your_token_generated
+
+Add all the links in the cronjob, as shown in the example below. Repeat for all links.
+
+API Providers
+
+How to work using third party API on the system.
+
+Go to the menu Admin > API Providers, after access in, you will see this.
+
+Add API Provider
+
+Note
+
+* If you delete an API, all services for that API will be deleted automatically from the system
+* You can add as many APIs as you like
+* Supports two types of API parameters (key and api_token)
+* Cannot add the same API twice with the same API Key
+
+Congratulations, You’ve made it this far!
+
+Name – API Name
+API Url – Example https://serviceapi.com/api/v2
+Parameter Type – Select the API parameter correctly (key or
+api_token)
+API Key – Get the secret key of the API
+Status – Enables and Disables the System API
+
+Note: If you choose the type of parameter of your API incorrectly, it will cause an error.
+
+Google reCAPTCHA V2
+
+How to set up Google reCAPTCHA V2
+
+1.
+Access the link by
+clicking here
+, and then click on
+Admin console
+as shown in the image below.
+
+Note
+
+* We recommend using Google reCAPTCHA V2
+* reCAPTCHA active on the page Login, Register and Recover Password
+
+You will see this screen
+
+Fill out the form as in the image below
+
+After clicking on SUBMIT, you will be able to view this screen with the data SITE KEY and SECRET KEY, as shown below in the image below
+
+2.
+
+Go to the menu
+Admin > Settings
+and then click on
+Google Recaptcha
+
+Click on the status button to release the Google recaptcha configuration, as in the image below
+
+Congratulations, You’ve made it this far!
+
+Now just fill in the “Key Public” and “Private Key” fields with the “Site Key” and “Secret Key” that Google has generated for you and then click on save.
+
+PayPal
+Currencies that are available on the BoostPanel that PayPal does not support.
+
+CNY – Chinese Yuan
+RON – Romania
+TRY – Turkey
+ZAR – South Africa
+Access the link by clicking here and click on the blue button as in the image below
+
+Log in to your PayPal account.
+
+2. After that, click Live and then the Create App button, as in the image below
+
+Note
+
+* Sandbox for a testing environment
+* Live for a production environment
+
+You will see this screen
+
+Name your application and click Create App, as in the image above
+
+After that, this will be the result you will receive
+
+Congratulations, You’ve made it this far!
+
+Clicking on SHOW, you see the Secret. Now with Client ID and Secret, let’s go to BoostPanel to set up Paypal.
+
+Go to the menu Admin > Payment Integrations and click Edit on PayPal, to see the same result how in image below
+
+Now copy the Client ID and Secret that PayPal generated for your application. And fill in the Client ID and Client Secret fields is then click on the save button as shown in the image above.
+
+PagSeguro
+Access the link by clicking here and connect with your PagSeguro account
+After login, it will show this
+
+Click on VENDA ONLINE > Integrações as shown in the image below
+
+You will see this screen
+
+Now click on the Gerar token and with the created token, let’s configure the BoostPanel.
+
+Let’s configure BoostPanel now
+
+Go to the menu Admin > Payment Integrations and click Edit on PagSeguro, to see the same result how in image below
+
+Congratulations, You’ve made it this far!
+
+After generating the token, copy and paste in the token field and enter your pagseguro email in the email field, as shown in the image above and click save.
+
+MercadoPago
+Access the link by clicking here and connect with your MercadoPago account how in image below
+
+After login, access this link, and select Brazil and click Enter as shown in the image below
+
+After successfully creating the APP, access this link to view this page how in image below
+
+Copy the Access Token from Modo Produção as in the image above and let`s go will configure in BoostPanel now
+
+Now go to BoostPanel and access menu the Admin > Payment integrations and click the Edit button on MercadoPago, to see the same result how in image below
+
+Congratulations, You’ve made it this far!
+
+Copy your Access Token and paste it into the Access Token field then click Save As in the image above.
+
+Stripe
+Log in to your Stripe account by clicking here
+After login, copy the Publishable Key and Secret Key token by clicking here
+
+Let’s configure Stripe on BoostPanel now
+
+Go to the menu Admin > Payment Integrations and click Edit on Stripe, to see the same result how in image below
+
+Congratulations, You’ve made it this far!
+
+Copy Publishable Key and Secret Key paste in the indicated fields and click on Save
+
+2Checkout
+Currencies available on the BoostPanel that 2Checkout supports
+
+USD – United States of America
+EUR – European Union
+GBP – United Kingdom
+JPY – Japan
+CAD – Canada
+RON – Romania
+CZK – The Czech Republic
+HUF – Hungary
+TRY – Turkey
+ZAR – South Africa
+MXN – Mexico
+Log in to your 2Checkout account by clicking here
+After login, copy Merchant Code, Publishable Key and Private Key by clicking here
+
+Let’s configure 2Checkout on BoostPanel now
+
+Go to the menu Admin > Payment Integrations and click Edit on 2Checkout, to see the same result how in image below
+
+Merchant ID, you will paste into the Seller ID field
+
+Congratulations, You’ve made it this far!
+
+Copy Merchant Code, Publishable Key and Private Key paste into the indicated fields and click Save
+
+CoinPayments
+Log in to your CoinPayments account by clicking here
+After login, access the Coin Settings menu by clicking here and you will get this result
+
+Check the box below Enabled to activate all currencies or click on each one to activate the currencies you want to support.
+
+After selecting the currencies you want, scroll down and click on the “Update Coin Preferences” button to save
+
+After saving, access the API Keys menu by clicking here and click on “Generate new key…”. After, click in button “Edit Permissions” how in image below
+
+You will see this screen
+
+As shown in the image above, check the option get_tx_info and then scroll down and click on the “Update Permissions” button to save the change.
+
+Go to the menu Admin > Payment Integrations and click Edit on CoinPayments, to see the same result how in image below
+
+If you want to use the test mode (sandbox) you need to activate the Litecoin Testnet currency in Coin Settings in CoinPayments and then in BoostPanel you change the Environment from Live to Sandbox.
+
+Congratulations, You’ve made it this far!
+
+Now, you can access API Keys in CoinPayments by clicking here and copy Public Key and Private Key, then paste in the fields indicated as in the image above and click Save.
+
+Skrill
+Go to the menu Admin > Payment Integrations and click Edit on Skrill, to see the same result how in image below
+
+Congratulations, You’ve made it this far!
+
+Put your email used in Skrill in the indicated field and click on the SAVE button as shown in the image above.
+
+Remember: You need to have a account Skrill Business for use this option
+
+PayUmoney
+
+Guide under construction …
+
+PayTM
+
+Guide under construction …
+
+Instamojo
+
+Guide under construction …
+
+Mollie
+
+Guide under construction …
+
+RazorPay
+
+Guide under construction …
+
+Boostpanel Files
+
+All Boostpanel files are free to use.
+
+Default Boostpanel Theme (https://colorlib.com)
+
+Theme adapted for Boostpanel, please do not remove the colorlib credits from the footer. In the future you will receive an update with the removal of credits.
+
+Boostrap v4.3.1 (https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+Boostrap DatePicker v1.7.1 (https://github.com/uxsolutions/bootstrap-datepicker)
+Boostrap Toggle v2.2.0 (https://www.bootstraptoggle.com/)
+Font Awesome v4.5.0 (https://fontawesome.com/)
+SweetAlert2 v9.x (https://sweetalert2.github.io/)
+c3Chart v0.7.15 (https://c3js.org/)
+ckEditor v4.13.1 (https://ckeditor.com/ckeditor-4/)
+codeMirror v5.49.2 (https://codemirror.net/)
+AOS Animate v2.3.1 (https://michalsnik.github.io/aos/)
+jQuery v3.4.1 (https://jquery.com/)
+jQuery CounterUP v1.0 (https://github.com/bfintal/Counter-Up)
+jQuery tagsInput Revisited v2.1 (https://github.com/underovsky/jquery-tagsinput-revisited)
+
+All main BoostPanel files for style and Javascript scripts are all minified and not minified for editing.
